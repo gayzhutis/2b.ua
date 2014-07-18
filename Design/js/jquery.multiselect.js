@@ -157,9 +157,9 @@ $.fn.multiselect = function (options) {
 
             //Check default value in data-val holder
             if ($.isEmptyObject(self.store.values)) {
-                //self.elements.val.text(self.elements.val.attr('data-default'));
+                self.elements.val.text(self.elements.val.attr('data-default'));
                 //MEdvedev: 2013-09-22
-                self.elements.val.text(self.elements.val.attr('text-default'));
+                //self.elements.val.text(self.elements.val.attr('text-default'));
                 //end
                 self.actions.status.empty();
             }
@@ -172,8 +172,8 @@ $.fn.multiselect = function (options) {
             self.store.values = {};
 
             //Medvedev: 2013-09-12			
+            self.elements.val.text(self.elements.val.attr('data-default'));
             //self.elements.val.text(self.elements.val.attr('data-default'));
-            self.elements.val.text(self.elements.val.attr('text-default'));
             //end
 
 

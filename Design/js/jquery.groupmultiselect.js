@@ -24,12 +24,14 @@ $.fn.groupmultiselect = function (options) {
     };
 
     self.debug = false;
+    
     //Medvedev: 2013-09-23
     //to be invoked after "apply" action
     self.onApply = function (selected) {
         /// <param name="selected" type="Array">Array of selected values</param>
     };
     //
+    
 
     var __construct = function (options) {
         $.extend(self, options, true);
@@ -132,6 +134,7 @@ $.fn.groupmultiselect = function (options) {
         status: {
             empty: function () {
                 self.addClass('empty').removeClass('activated');
+                
             },
             active: function () {
                 self.addClass('activated').removeClass('empty');
@@ -198,9 +201,9 @@ $.fn.groupmultiselect = function (options) {
 
             //Check default value in data-val holder
             if ($.isEmptyObject(self.store.values)) {
-                //self.elements.val.text(self.elements.val.attr('data-default'));
+                self.elements.val.text(self.elements.val.attr('data-default'));
                 //Medvedev: 2013-09-14                
-                self.elements.val.text(self.elements.val.attr('text-default'));
+                //self.elements.val.text(self.elements.val.attr('text-default'));
                 //end
 
                 self.actions.status.empty();
@@ -215,8 +218,8 @@ $.fn.groupmultiselect = function (options) {
             self.store.values = {};
 
             //Medvedev: 2013-09-12			
-            //self.elements.val.text(self.elements.val.attr('data-default'));
-            self.elements.val.text(self.elements.val.attr('text-default'));
+            self.elements.val.text(self.elements.val.attr('data-default'));
+            //self.elements.val.text(self.elements.val.attr('text-default'));
             //end
 
             self.elements.inputs.each(function () {
@@ -255,6 +258,8 @@ $.fn.groupmultiselect = function (options) {
                 msg = 'Выбрано ' + count + ' эл.';
             }
             self.elements.val.text(msg);
+            if(count==0)
+                self.elements.val.text(self.elements.val.attr('data-default'));
 
 
             self.elements.val.parent().find("[type=hidden]").val(selected.join("OR"));

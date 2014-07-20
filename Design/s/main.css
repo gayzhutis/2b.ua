@@ -32,6 +32,9 @@ gray #797979
 	margin: 0;
 	outline:none;
 }
+.clear_both {
+    clear: both;
+}
 /*
 html {
 	height: 100%;
@@ -873,6 +876,13 @@ input[type=checkbox]:not(.default)+span:before{
 	cursor: pointer;
 }
 
+.b-search-form .b-id-search .search-input .submit.close {
+    background: url(../i/sprite.png) -246px -102px no-repeat;
+}
+.b-search-form .b-id-search .search-input .submit.close:hover {
+    background: url(../i/sprite.png) -246px -102px no-repeat;
+}
+
 .b-search-form .b-id-search .search-input .submit:hover{
 	background-position: -60px -100px;
 }
@@ -1136,6 +1146,7 @@ input[type=checkbox]:not(.default)+span:before{
 	color: #797979;
 	font-size: 16px;
 	width: 18.7%;
+        margin-top: 10px;
 }
 
 .b-search-results .b-res-head:after {
@@ -1327,6 +1338,9 @@ input[type=checkbox]:not(.default)+span:before{
 	overflow: hidden;
 	width: 100%;
 }
+.b-realtor-page .b-search-results .b-res-el .b-name {
+    width: 570px;
+}
 
 .b-search-results .b-res-el .b-favorite,
 .b-search-results .b-res-list-table .b-favorite,
@@ -1383,11 +1397,17 @@ input[type=checkbox]:not(.default)+span:before{
 	cursor: default;
 
 }
+.b-view-page .b-urgent-label {
+    top:-5px;
+}
 
 .b-search-results .b-res-el .b-stat {
 	float: left;
 	width: 28%;
 	margin-right: 3%;
+}
+.b-realtor-page .b-search-results .b-res-el .b-stat {
+    margin-top: 5px;
 }
 
 .b-search-results .b-res-el .b-description {
@@ -1427,6 +1447,14 @@ input[type=checkbox]:not(.default)+span:before{
 	color: #797979;
 }
 
+.object-no {
+    color: #797979;
+    font: 13px/30px Arial,sans-serif;
+}
+.object-no b {
+    color: #000;
+}
+
 .b-price-sticker{
     display: inline-block;
     overflow: hidden;
@@ -1443,6 +1471,15 @@ input[type=checkbox]:not(.default)+span:before{
     padding: 6px 14px;
     position: relative;
 }
+.b-realtor-page .b-price-sticker .in, .b-view-page .b-price-sticker .in {
+    border: none;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-left: 15px;
+}
 
 .b-price-sticker .in:before,
 .b-price-sticker .in:after{
@@ -1458,6 +1495,13 @@ input[type=checkbox]:not(.default)+span:before{
     border: 1px solid #e8dda4;
     border-color: #e8dda4 #f8f5d0 #f8f5d0  #e8dda4;
 }
+.b-realtor-page .b-price-sticker .in:before,
+.b-realtor-page .b-price-sticker .in:after, 
+.b-view-page .b-price-sticker .in:before,
+.b-view-page .b-price-sticker .in:after{
+    display: none;
+    
+}
 
 .b-price-sticker .in:after{
     left: auto;
@@ -1466,13 +1510,19 @@ input[type=checkbox]:not(.default)+span:before{
 
 
 .b-search-results .b-res-el .b-main-info .price{
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .b-search-results .b-res-el .b-main-info {
 	float: right;
 	width: 21%;
 	
+}
+
+.b-realtor-page .b-search-results .b-res-el .b-main-info {
+	float: right;
+	width: 21%;
+	clear: right;
 }
 
 .b-main-info .id {
@@ -1569,6 +1619,9 @@ input[type=checkbox]:not(.default)+span:before{
 	float: left;
 	width: 60%;
 }
+.b-realtor-page .b-search-results .b-res-el .b-sub-info .links {
+    width: 550px;
+}
 
 .b-search-results .b-res-el .b-sub-info .links ul{
 	display: inline;
@@ -1585,6 +1638,20 @@ input[type=checkbox]:not(.default)+span:before{
 
 .b-search-results .b-res-el .b-sub-info .links ul li:first-child:before{
 	display: none;
+}
+
+.b-realtor-page .zadatok {
+    display: block;
+    float: right;
+    color: #ca0000;
+    font-weight: bold;
+}
+
+.b-realtor-page .delayed {
+    display: block;
+    float: right;
+    color: #797979;
+    font-weight: bold;
 }
 
 .b-search-results .b-res-el .b-sub-info .links .my-app{
@@ -1619,6 +1686,10 @@ input[type=checkbox]:not(.default)+span:before{
 	font-weight: bold;
 	position: relative;
 }
+.b-realtor-page .b-sub-info .date {
+    width: 157px;
+    padding-left: 15px;
+}
 
 .b-sub-info .date:before{
 	content: '';
@@ -1629,7 +1700,15 @@ input[type=checkbox]:not(.default)+span:before{
 	width: 17px;
 	height: 15px;
 }
-
+.b-realtor-page .b-sub-info .date:before{
+    background: url("../i/sprite.png") no-repeat scroll -150px -70px rgba(0, 0, 0, 0);
+    content: "";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 15px;
+}
 
 /* ######################################################## */
 
@@ -1670,6 +1749,9 @@ input[type=checkbox]:not(.default)+span:before{
 	background: -ms-linear-gradient(top,  #ffffff 0%,#e7f0f5 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #ffffff 0%,#e7f0f5 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7f0f5',GradientType=0 ); /* IE6-9 */
+}
+.b-realtor-page .b-pagination .show-more {
+    margin-left: -55px;
 }
 .b-pagination .show-more:hover {
 	box-shadow: 0 2px 6px 0 #c7d9e3;
@@ -2017,10 +2099,7 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 	display: inline-block;
 	margin: -5px 3px 0 0;
 	position: relative;
-	top: 3px;
-}
-.b-search-results .b-res-list-table .b-favorite{
-	top: 5px;
+	top: 7px;
 }
 
 
@@ -2048,6 +2127,19 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 	float: left;
 	list-style: none;
 }
+.b-view-page .b-photos .photo-previews li a[data-photo-gallery-all]{
+    width: 95px;
+    height: 56px;
+    padding-top: 15px;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    box-shadow: 0 0 24px rgba(25, 65, 91, 0.1) inset;
+}
+.b-view-page .b-photos .photo-previews li a[data-photo-gallery-all]:hover span.gallery-all-text {
+    border-bottom: 1px dotted #99c2d6;
+}
 .b-view-page .b-main-info{
 	float: left;
 	width: 345px;
@@ -2073,24 +2165,60 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 	clear: both;
 }
 
-.b-view-page .title{
-	margin-bottom: 15px;	
+.b-view-page .title {
+    padding-bottom: 25px;
+}
+
+.b-view-page .title span.nam{
+        color: #006699;
+        position: relative;
+}
+.b-view-page .title span.nam:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(0, 102, 153, 0.4);
 }
 
 .b-view-page .b-photos .id{
+        width: 140px;
 	float: left;
 	color: #797979;
 	font-size: 12px;
-	margin-bottom: 2px;
+}
+.b-view-page .b-photos .zadatok {
+    display: block;
+    float: left;
+    width: 140px;
+    text-align: right;
+    color: #ca0000;
+    font-weight: bold;
 }
 
 .b-view-page .b-photos .id b{
 	color: #000000;
 }
 
-.b-view-page .b-photos .dir-link{
-	float: right;
-	font-size: 12px;
+.b-view-page .b-photos .date {
+    display: block;
+    float: right;
+    position: relative;
+    color: #000;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.b-view-page .b-photos .date:before{
+    background: url("../i/sprite.png") no-repeat scroll -150px -70px rgba(0, 0, 0, 0);
+    content: "";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 15px;
 }
 
 .b-view-page .b-photos .photo-big{
@@ -2198,9 +2326,16 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 .b-view-page .price-per-m{
 	display: inline-block;
-	margin: 43px 13px 0;
+	margin: 47px 13px 0;
 	position: relative;
 	color: #797979;
+        font-size: 14px;
+}
+
+.b-realtor-page .price-per-m{
+	position: relative;
+	color: #797979;
+        font-size: 14px;
 }
 
 .b-view-page .dl{
@@ -2216,10 +2351,25 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 	margin: 8px 0;
 	font-size: 14px;
 	line-height: 20px;
+        height: 160px;
+        overflow: hidden;
 }
 
 .b-view-page .links{
-	line-height: 21px;
+	line-height: 20px;
+}
+
+.b-view-page .links .links-column {
+	display: block;
+        float: left;
+        width: 182px;
+        overflow-x: hidden;
+        color: #797979;
+}
+.b-view-page .links .links-column:last-child {
+	display: block;
+        float: left;
+        width: 163px;
 }
 
 .b-view-page .b-realtor{
@@ -2329,9 +2479,10 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 .b-realtor-page .b-photo-side{
 	float: left;
-	width: 270px;
+	width: 217px;
 	margin-right: 20px;
 	margin-top: 5px;
+        margin-bottom: 40px;
 }
 .b-realtor-page .b-photo-side .about{
 	font-size: 14px;
@@ -2345,12 +2496,19 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 .b-realtor-page .b-main-info{
 	float: left;
-	width: 422px;
+	width: 480px;
 }
 
 .b-realtor-page .b-main-info .b-operations{
 	margin: 18px 0 15px;
 	font-size: 14px;
+}
+.b-realtor-page .b-main-info .b-operations dl dt {
+        width: 170px;
+        margin-right: 0;
+}
+.b-realtor-page .b-main-info .b-operations dl dd {
+        width: 310px;
 }
 .b-realtor-page .b-main-info .b-operations dl{
 	padding-bottom: 5px;
@@ -2418,21 +2576,22 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 .b-realtor-page  .b-contacts {
 	float: right;
-	width: 210px;
+	width: 190px;
 	font-size: 14px;
 	line-height: 1.6em;
+        margin-top: 56px;
 }
 
 .b-realtor-page .b-contacts .phones{
-	line-height: 1.4em;
-	font-size: 20px;
+	line-height: 1.3em;
+	font-size: 22px;
 	white-space:nowrap;
 	margin-bottom: 5px;
 }
 
 .b-realtor-page .b-contacts .cont {
-	padding-left: 25px;
 	position: relative;
+        padding-bottom: 1px;
 }
 
 .b-realtor-page .b-contacts .cont:before{
@@ -2443,8 +2602,15 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 	height: 16px;
 	left: 0;
 	top: 5px;
+        display: block;
 }
-
+.b-realtor-page .b-contacts .cont.phones:before {
+    display: none;
+}
+.b-realtor-page .b-contacts .cont.email, .b-realtor-page .b-contacts .cont.link, .b-realtor-page .b-contacts .cont.skype {
+    padding-left: 25px;
+    font-size: 12px;
+}
 .b-realtor-page .b-contacts .cont.email:before{
 	background-position: -433px -70px;
 }
@@ -2504,6 +2670,22 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 /* ######################################################## */
 
+.b-realtors-wrap {
+    display: block;
+    position: relative;
+}
+.b-realtors-wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.b-realtors-list {
+    width: 755px;
+    display: block;
+    float: left;
+}
+
 .b-realtors-list h2{
 	margin-bottom: 10px;
 }
@@ -2527,7 +2709,7 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 .b-realtors-list  .b-realtors-el .b-photo {
 	float: left;
-	margin: 15px;
+	margin: 15px 30px 15px 15px;
 	position: relative;
 }
 
@@ -2537,10 +2719,19 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 .b-realtors-list  .b-realtors-el .b-info{
 	float: left;
-	width: 265px;
-	margin-right: 20px;
+	width: 380px;
 	padding-top: 13px;
 	padding-bottom: 15px;
+}
+
+.b-realtors-list  .b-realtors-el .b-info .dl dt {
+    width: 38%;
+    padding-bottom: 5px;
+}
+
+.b-realtors-list  .b-realtors-el .b-info .dl dd {
+    width: 60%;
+    padding-bottom: 5px;
 }
 
 .b-realtors-list  .b-realtors-el .b-info .b-name{
@@ -2548,34 +2739,65 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 	font-weight: bold;
 	margin-bottom: 7px;
 }
-
-.b-realtors-list  .b-realtors-el .b-description{
-	float: left;
-	width: 310px;
-	padding-top: 46px;
-	line-height: 20px;
-}
-
-.b-realtors-list  .b-realtors-el .b-description .label{
-	color: #797979;
-}
-	
-.b-realtors-list  .b-realtors-el .b-description .more{
-	font-size: 11px;
-}
 	
 .b-realtors-list  .b-realtors-el .b-contacts{
 	float: right;
 	padding-top: 46px;
-	width: 150px;
-	font-size: 16px;
-	line-height: 23px;
-	margin-right: 40px;
+	width: 130px;
+	font-size: 18px;
+	line-height: 24px;
+	margin-right: 20px;
+}
+
+.b-realtors-form {
+    display: block;
+    float: right;
+    width: 174px;
+    border: 3px solid #53a5c9;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ie-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 59px;
+    background: #fff;
+    box-shadow: none, none, 0 2px 5px 0 #97cae1, none;
+}
+.b-realtors-form .search-params {
+    border: 0;
+}
+.b-realtors-form.b-search-form:after {
+    display: none;
+}
+.b-realtors-form.b-search-form .search-control {
+    padding: 15px;
+}
+
+.b-realtors-form.b-search-form .search-button {
+    float: none;
+}
+.b-realtors-form.b-search-form .clear-search {
+    float: none;
+    margin: 15px auto 0;
+    display: block;
+    text-align: center;
 }
 
  .b-contacts .phone{}
  .b-contacts .email{}
  .b-realtors-el .b-contacts .email a{font-size:13px;}
+.b-realtors-el .b-contacts .email:before {
+    background: url("../i/sprite.png") no-repeat scroll -433px -70px rgba(0, 0, 0, 0);
+    content: "";
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    width: 18px;
+}
+.b-realtors-el .b-contacts .email {
+    padding-left: 25px;
+    position: relative;
+}
 
 .b-room-search .b-clear-favorites{
 	float: right;
@@ -3384,7 +3606,7 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
     opacity:0.5;
     filter:alpha(opacity=50);
     z-index: 50;
-    display: none;
+    display: block;
 }
 /* ######################################################## */
 

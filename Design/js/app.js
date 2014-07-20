@@ -192,6 +192,10 @@ $(function () {
     $(document).on("click", '[data-photo-gallery-id]', function () {
         //$('[data-photo-gallery="wrap"]').fadeIn();
     });
+    
+    $(document).on("click", '[data-photo-gallery-all]', function () {
+        $('[data-photo-gallery-id="1"]').click();
+    });
     // =================================================================
 
     /* всплывающая фотогалерея */
@@ -615,4 +619,23 @@ $(function () {
             $(".b-header .top-info .b-phones-tooltip").fadeOut();
         }
     });
+    
+    $('.search-input').on('keyup paste','.input', function() {
+		var el = $(this);
+		setTimeout(function() {
+			var query = $(el).val();
+			var letters_cnt = query.length;
+
+			if (letters_cnt >= 1) {
+				$('.search-input .submit').addClass('close');
+			} else {
+				$('.search-input .submit').removeClass('close');
+			}
+		}, 100);
+	});
+    $('.search-input').on('click','.close',function() {
+        $('.search-input .input').val("").removeClass('activated');
+        $(this).removeClass('close');
+    });
+
 });

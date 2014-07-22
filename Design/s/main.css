@@ -1471,15 +1471,6 @@ input[type=checkbox]:not(.default)+span:before{
     padding: 6px 14px;
     position: relative;
 }
-.b-realtor-page .b-price-sticker .in, .b-view-page .b-price-sticker .in {
-    border: none;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-    padding-right: 0;
-    padding-top: 10px;
-    padding-left: 15px;
-}
 
 .b-price-sticker .in:before,
 .b-price-sticker .in:after{
@@ -1495,13 +1486,6 @@ input[type=checkbox]:not(.default)+span:before{
     border: 1px solid #e8dda4;
     border-color: #e8dda4 #f8f5d0 #f8f5d0  #e8dda4;
 }
-.b-realtor-page .b-price-sticker .in:before,
-.b-realtor-page .b-price-sticker .in:after, 
-.b-view-page .b-price-sticker .in:before,
-.b-view-page .b-price-sticker .in:after{
-    display: none;
-    
-}
 
 .b-price-sticker .in:after{
     left: auto;
@@ -1510,7 +1494,8 @@ input[type=checkbox]:not(.default)+span:before{
 
 
 .b-search-results .b-res-el .b-main-info .price{
-	margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 6px;
 }
 
 .b-search-results .b-res-el .b-main-info {
@@ -2326,7 +2311,7 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 
 .b-view-page .price-per-m{
 	display: inline-block;
-	margin: 47px 13px 0;
+	margin: 40px 13px 0;
 	position: relative;
 	color: #797979;
         font-size: 14px;
@@ -2336,6 +2321,10 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
 	position: relative;
 	color: #797979;
         font-size: 14px;
+}
+
+.b-view-page .price-per-m sup, .b-realtor-page .price-per-m sup {
+    font-size: 10px;
 }
 
 .b-view-page .dl{

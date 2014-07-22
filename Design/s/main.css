@@ -595,7 +595,7 @@ input[type=checkbox]:not(.default)+span:before{
 }
 
 .b-header .top-info .b-title {
-	padding-top: 35px;
+	padding-top: 46px;
 	float: left;
 }
 .b-header .top-info .b-title .name{
@@ -611,7 +611,7 @@ input[type=checkbox]:not(.default)+span:before{
 .b-header .top-info .b-contacts {
 	text-align: right;
 	float: right;
-	padding-top: 25px;
+	padding-top: 38px;
 }
 
 .b-header .top-info .b-phone {
@@ -2194,7 +2194,7 @@ table.b-gradient_overflow tr:hover .overflow:not(:hover):after{
     display: block;
     float: left;
     width: 140px;
-    text-align: right;
+    text-align: center;
     color: #ca0000;
     font-weight: bold;
 }
